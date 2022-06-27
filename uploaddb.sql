@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 26, 2022 at 11:19 PM
+-- Generation Time: Jun 27, 2022 at 12:49 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -24,6 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `csv_import`
+--
+
+DROP TABLE IF EXISTS `csv_import`;
+CREATE TABLE IF NOT EXISTS `csv_import` (
+  `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `initials` varchar(50) DEFAULT NULL,
+  `age` varchar(50) DEFAULT NULL,
+  `dateofbirth` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `file`
 --
 
@@ -34,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `type` varchar(100) NOT NULL,
   `size` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `file`

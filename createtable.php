@@ -1,5 +1,5 @@
 <?php
-include_once 'dbconnection.php';
+include_once'dbconnection.php';
 
 // sql to create table
 $sql = "CREATE TABLE csv_import (
@@ -8,8 +8,7 @@ firstname VARCHAR(30) NOT NULL,
 lastname VARCHAR(30) NOT NULL,
 initials VARCHAR(50),
 age VARCHAR(50),
-dateofbirth VARCHAR(50), 
-)";
+dateofbirth VARCHAR(50))";
 
 if ($conn->query($sql) === TRUE) {
   echo "Table csv_import created successfully";
